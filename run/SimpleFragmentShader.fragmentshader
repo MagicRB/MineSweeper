@@ -1,0 +1,15 @@
+#version 330 core
+
+// Ouput data
+out vec3 color;
+
+in vec2 UV;
+
+uniform sampler2DArray tex;
+
+uniform float layer;
+
+void main()
+{
+	color = texture(tex, vec3(UV, layer)).rgb;
+}
